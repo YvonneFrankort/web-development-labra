@@ -3,7 +3,9 @@ nav ul {
 }
 
 nav a {
-text-decoration: none; }
+text-decoration: none;
+/*color: var(--color-text);*/ /* before with text-decoration none, it showed default color, here was blue for a link*/
+}                         /*now we took the color variable defined in root, so the text color changed to grey */
 
 nav a:hover { text-decoration: underline; } table { border-collapse: collapse;
 width: 100%; max-width: 800px; }
@@ -13,4 +15,58 @@ th, td { border: 1px solid #ccc; padding: 0.5rem; }
  caption {
 text-align: left; font-weight: bold; margin-bottom: 0.25rem; }
 
+
+:root {
+ --color-text: #1f2937;
+ --color-accent: #b45309; /* kahvin sävy */
+ --space: 1rem;
+}
+html { font-size: 16px; }
+body {
+ font-family: system-ui, sans-serif;
+ line-height: 1.5; /* >= 1.4 */
+ color: var(--color-text);
+ margin: 0;
+}
+
+
+.container {    /*.container is a class, add .container in the files where you want the style applied, <div class="container">*/
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: var(--space);
+}
+
+
+a { text-decoration: underline; }
+a:hover { text-decoration: none; }
+:focus { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+/*focus is for keyboard users only, when using tab..., does not affect mouse users*/
+
+h1, h2, h3 { 
+  line-height: 1.2; 
+  margin: 0 0 calc(var(--space) * 0.75); 
+}
+
+p, ul, ol, table { 
+  margin: 0 0 var(--space); 
+}
+
+.box {
+ margin: var(--space);
+ padding: calc(var(--space) * .75);
+ border: 2px solid #e5e7eb;
+ background: #f8fafc;
+}
+
+.title { 
+  color: #333; 
+}
+
+.title.strong { 
+  color: var(--color-accent); /* overrides anything with .title */ 
+}
+
+footer .container {
+  text-align: center;
+}
 
