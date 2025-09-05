@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kahvila Ilo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Tila tästä</h1>
+         <nav aria-label="Päävalikko">
+            <ul>
+                <lis><a href="menu.html">Menu</a></lis></br>
+                <lis></lis><a href="tilaa.html"> Tila tästä!</a></lis></br>
+                <lis></lis><a href="galeria.html">Galeria</a></lis></br>
+                <lis></lis><a href="yhteystiedot.html"> Yhteystiedot</a></lis>
+            </ul>
+        </nav>
+        <p>
+        Voit tilata meidän herkkukakku tästä lomakeesta:
+        </p>
+    </header>
+    <main>
+        <form action="/submit-form" method="post">
+      <h2>Sinun yhteystiedot</h2>
+    
+      <div>
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="phone">Puhelinnumero:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div>
+      <p>Valitse koko:</p>
+      <label>
+        <input type="radio" name="size" value="small" required> Pieni
+      </label>
+      <label>
+        <input type="radio" name="size" value="medium"> Keskikoko
+      </label>
+      <label>
+        <input type="radio" name="size" value="large"> Iso
+      </label>
+    </div>
+
+    <div>
+      <label for="notes">Lisätiedot:</label>
+      <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Kirjoita lisätietoja tilauksestasi..."></textarea>
+    </div>
+       
+      <div>
+        <button type="submit">Lähettä</button>
+      </div>
+    </form>
+  </main>
+  </main>
+    <footer>
+        <p>
+            @ Kahvila Ilo 2025
+        </p>
+    </footer>
+</body>
+</html>
+       
