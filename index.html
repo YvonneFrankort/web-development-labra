@@ -12,15 +12,16 @@
     <header>
         <div class="container">
             <h1>Tervetuloa!</h1>
+            <h2 id="todays-date"></h2>
             <p>
                 Meiltä löytyy laja valikoima erilaisista kahvilatuoteista.
             </p>
             <nav aria-label="Päävalikko">
                 <ul>
-                    <lis><a href="menu.html">Menu</a></lis>
-                    <lis><a href="tilaa.html"> Tila tästä!</a></lis>
-                    <lis><a href="galeria.html">Galeria</a></lis>
-                    <lis><a href="yhteystiedot.html"> Yhteystiedot</a></lis>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="tilaa.html"> Tila tästä!</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="yhteystiedot.html"> Yhteystiedot</a></li>
                     <li><a href="tuotteet.html">Meidän tuotteet</a></li>
                 </ul>
             </nav>
@@ -28,6 +29,8 @@
     </header>
     <main>
         <div class="container">
+            <button id="toggle-specials">Näytä/Piilota erikoiset</button>
+            <button id="highlight-specials">Korosta erikoiset</button>
             <section aria-label="Päivän-erikoiset" class="box">
                 <h2 class="title">Päivän erikoiset:</h2> 
                 <ul>
@@ -45,6 +48,7 @@
             </p>
         </div>
     </footer>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
 
