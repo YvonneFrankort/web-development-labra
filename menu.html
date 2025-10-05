@@ -15,10 +15,10 @@
             <nav aria-label="Päävalikko">
                 <ul>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="tilaa.html"> Tila tästä!</a></li>
+                    <li><a href="tilaa.html">Tila tästä!</a></li>
                     <li><a href="galeria.html">Galeria</a></li>
-                    <li><a href=" index.html">Etusivulle</a></li>
-                    <li><a href="yhteystiedot.html"> Yhteystiedot</a></li>
+                    <li><a href="index.html">Etusivulle</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
                     <li><a href="tuotteet.html">Meidän tuotteet</a></li>
                 </ul>
             </nav>
@@ -27,46 +27,99 @@
 
     <main>
         <div class="container">
+
+            <div class="controls">
+                <div class="search">
+                    <label for="search">Hae tuotteita:</label>
+                    <input type="text" id="search" placeholder="Tuotteen nimi">
+                </div>
+
+                <div class="sort">
+                    <label for="sort">Järjestä:</label>
+                    <select id="sort">
+                        <option value="">-- Valitse --</option>
+                        <option value="nimi">Nimi (A–Ö)</option>
+                        <option value="hinta">Hinta (nouseva)</option>
+                    </select>
+                </div>
+
+                <div class="csv-add">
+                    <label for="csvInput">Lisää tuote:</label>
+                    <input type="text" id="csvInput">
+                    <button id="addCsvButton">Lisää tuote</button>
+                    <span id="csvMessage"></span>
+                </div>
+            </div>
+
+            <button id="printReport">Tulosta raportti</button>
+            <pre id="reportOutput" style="white-space: pre-wrap; border:1px solid #ddd; padding:8px; margin-top:8px;"></pre>
+
             <table>
                 <caption>Meidän herkkuliset tuotteet</caption>
                 <thead>
                     <tr>
                         <th>Tuote</th>
                         <th>Hinta</th>
+                        <th>Kategoria</th>
+                        <th>Toiminnot</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="menuTableBody">
                     <tr>
                         <td>Mansikkakakku</td>
-                        <td>$ 30</td>
+                        <td>30.00</td>
+                        <td>Makea</td>
                     </tr>
                     <tr>
                         <td>Kanelipulla</td>
-                        <td>$ 2.50</td>
+                        <td>2.50</td>
+                        <td>Makea</td>
+                    </tr>
                     <tr>
                         <td>Cappuccino</td>
-                        <td>$ 3.80</td>
+                        <td>3.80</td>
+                        <td>Kahvi</td>
                     </tr>
                     <tr>
                         <td>Kakao</td>
-                        <td>$ 3.00</td>
+                        <td>3.00</td>
+                        <td>Juoma</td>
                     </tr>
                     <tr>
                         <td>Ice Tea</td>
-                        <td>$ 4.00</td>
+                        <td>4.00</td>
+                        <td>Juoma</td>
                     </tr>
                 </tbody>
             </table>
+
+            <h2>Ostoskori</h2>
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Tuote</th>
+                        <th>Kpl</th>
+                        <th>Rivihinta</th>
+                    </tr>
+                </thead>
+                <tbody id="cartBody"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Yhteensä:</td>
+                        <td id="cartTotal">0.00 €</td>
+                    </tr>
+                </tfoot>
+            </table>
+
         </div>
     </main>
+
     <footer>
         <div class="container">
-            <p>
-                @ Kahvila Ilo 2025
-            </p>
+            <p>@ Kahvila Ilo 2025</p>
         </div>
     </footer>
+
     <script src="assets/js/script.js" defer></script>
 </body>
-
 </html>
